@@ -43,6 +43,8 @@ app.use("/api/v1/skill", skillRouter);
 app.use("/api/v1/project", projectRouter);
 
 app.use(express.static(path.resolve(__dirname, "portfolio-frontend", "dist")));
+app.use(express.static(path.resolve(__dirname, 'public')))
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "portfolio-frontend", "dist", "index.html"));
